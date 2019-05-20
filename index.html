@@ -36,13 +36,41 @@
             <div class="col-md-6 offset-md-3">
                 <h1 class="text-dark text-center my-3">Weight Converter</h1>
                 <form>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="pound">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fas fa-weight"></i></span>
                         </div>
                         <input type="number" class="form-control form-control-lg" placeholder="Enter Pounds.."
                             id="poundData">
                     </div>
+                    <div class="input-group mb-3" id="gram">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-weight"></i></span>
+                        </div>
+                        <input type="number" class="form-control form-control-lg" placeholder="Enter Grams.."
+                            id="gmData">
+                    </div>
+                    <div class="input-group mb-3" id="kilo">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-weight"></i></span>
+                        </div>
+                        <input type="number" class="form-control form-control-lg" placeholder="Enter Kilogram.."
+                            id="kgData">
+                    </div>
+                    <div class="input-group mb-3" id="ounce">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-weight"></i></span>
+                        </div>
+                        <input type="number" class="form-control form-control-lg" placeholder="Enter Ounce.."
+                            id="ounceData">
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="gram">Gram</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="ounce">Ounce</option>
+                        <option value="pound">Pound</option>
+                    </select>
                 </form>
 
                 <div id="results">
