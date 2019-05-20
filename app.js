@@ -38,25 +38,25 @@ inputDivP.addEventListener('input', (e) => {
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
 
     // getting the input data
-    let poundData = e.target.value;
+    let pndData = e.target.value;
 
     // printing the data
-    poundOutput.innerHTML = `${poundData}`
-    gramsOutput.innerHTML = `${poundData / 0.0022046}`;
-    kgOutput.innerHTML = `${poundData / 2.2046}`;
-    ounceOutput.innerHTML = `${poundData * 16}`;
+    poundOutput.innerHTML = `${pndData}`
+    gramsOutput.innerHTML = `${pndData / 0.0022046}`;
+    kgOutput.innerHTML = `${pndData / 2.2046}`;
+    ounceOutput.innerHTML = `${pndData * 16}`;
 })
 inputDivG.addEventListener('input',(e)=>{
 
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none';
 
     // getting the input data
-    let gramData = e.target.value;
+    let gmData = e.target.value;
 
-    gramsOutput.innerHTML = `${gramData}`
-    poundOutput.innerHTML = `${gramData*0.0022046}`;
-    kgOutput.innerHTML = `${gramData/1000}`;
-    ounceOutput.innerHTML = `${gramData*0.035274}`
+    gramsOutput.innerHTML = `${gmData}`
+    poundOutput.innerHTML = `${gmData*0.0022046}`;
+    kgOutput.innerHTML = `${gmData/1000}`;
+    ounceOutput.innerHTML = `${gmData*0.035274}`
 
 
 })
@@ -65,12 +65,12 @@ inputDivK.addEventListener('input',(e)=>{
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
 
     // getting the input data
-    let KgData = e.target.value;
+    let kiloData = e.target.value;
 
-    kgOutput.innerHTML = `${kgData}`
-    poundOutput.innerHTML = `${KgData*2.2046}`;
-    gramsOutput.innerHTML = `${kgData/0.0010000}`;
-    ounceOutput.innerHTML = `${kgData*35.274}`
+    kgOutput.innerHTML = `${kiloData}`
+    poundOutput.innerHTML = `${KiloData*2.2046}`;
+    gramsOutput.innerHTML = `${kiloData/0.0010000}`;
+    ounceOutput.innerHTML = `${kiloData*35.274}`
     
 })
 inputDivO.addEventListener('input',(e)=>{
