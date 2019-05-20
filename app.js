@@ -46,7 +46,7 @@ inputDivP.addEventListener('input', (e) => {
     kgOutput.innerHTML = `${pndData / 2.2046}`;
     ounceOutput.innerHTML = `${pndData * 16}`;
 })
-inputDivG.addEventListener('input',(e)=>{
+inputDivG.addEventListener('input', (e) => {
 
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none';
 
@@ -54,39 +54,39 @@ inputDivG.addEventListener('input',(e)=>{
     let gmData = e.target.value;
 
     gramsOutput.innerHTML = `${gmData}`
-    poundOutput.innerHTML = `${gmData*0.0022046}`;
-    kgOutput.innerHTML = `${gmData/1000}`;
-    ounceOutput.innerHTML = `${gmData*0.035274}`
+    poundOutput.innerHTML = `${gmData * 0.0022046}`;
+    kgOutput.innerHTML = `${gmData / 1000}`;
+    ounceOutput.innerHTML = `${gmData * 0.035274}`
 
 
 })
-inputDivK.addEventListener('input',(e)=>{
-   
+inputDivK.addEventListener('input', (e) => {
+
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
 
     // getting the input data
     let kiloData = e.target.value;
 
     kgOutput.innerHTML = `${kiloData}`
-    poundOutput.innerHTML = `${KiloData*2.2046}`;
-    gramsOutput.innerHTML = `${kiloData/0.0010000}`;
-    ounceOutput.innerHTML = `${kiloData*35.274}`
-    
+    poundOutput.innerHTML = `${KiloData * 2.2046}`;
+    gramsOutput.innerHTML = `${kiloData / 0.0010000}`;
+    ounceOutput.innerHTML = `${kiloData * 35.274}`
+
 })
-inputDivO.addEventListener('input',(e)=>{
+inputDivO.addEventListener('input', (e) => {
 
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
-    
+
     // getting the input data
     let OunceData = e.target.value;
 
     ounceOutput.innerHTML = `${OunceData}`
-    poundOutput.innerHTML = `${OunceData*0.062500}`;
-    gramsOutput.innerHTML = `${OunceData/0.035274}` 
-    kgOutput.innerHTML = `${OunceData*35.274}`;
+    poundOutput.innerHTML = `${OunceData * 0.062500}`;
+    gramsOutput.innerHTML = `${OunceData / 0.035274}`
+    kgOutput.innerHTML = `${OunceData * 35.274}`;
 
 
-    
+
 })
 selectList.addEventListener('change', (e) => {
     if (e.target.value === 'g') {
