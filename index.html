@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Google Font Added -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900i&display=swap" rel="stylesheet">
+
 
 
     <!-- Bootstrap CSS -->
@@ -17,20 +18,65 @@
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Hello, world!</title>
 </head>
 
 <body class="bgImg">
     <nav class="navbar navbar-expand-lg navbar-light bg-info text-center justify-content-center">
-        
+
         <a class="navbar-brand  " href="#">
             <h3>Web App</h3>
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
         </div>
     </nav>
-    <h1 class="text-center">Weight Converter</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h1 class="text-dark text-center my-3">Weight Converter</h1>
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-weight"></i></span>
+                        </div>
+                        <input type="number" class="form-control form-control-lg" placeholder="Enter Pounds.."
+                            id="poundData">
+                    </div>
+                </form>
+
+                <div id="results">
+                    <div class="card mb-3 bg-info">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <h3>Grams:</h3>
+                                <div id="gramsOutput"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 bg-danger">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <h3>Kilograms:</h3>
+                                <div id="kgOutput"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 bg-success">
+                        <div class="card-body">
+                            <div class="card-block">
+                                <h3>Ounce:</h3>
+                                <div id="ounceOutput"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
