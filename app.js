@@ -1,5 +1,4 @@
-// getting the refrences here
-
+// getting the references here
 // result to be printed
 const resultDiv = document.querySelector('#results');
 const gramsOutput = document.querySelector('#gramsOutput');
@@ -98,46 +97,102 @@ inputDivO.addEventListener('input', (e) => {
 
 
 })
+
+const addMessage = (text, response) => {
+
+
+    let msg = document.querySelector('#message');
+
+    // creating para
+    let div = document.createElement('div');
+
+    // adding class
+    div.className = response;
+
+    // adding text
+    div.textContent = text;
+
+
+    msg.appendChild(div);
+
+    // clearing the alert here
+    setTimeout(() => {
+        document.querySelector('.alert').remove();
+    }, 3000)
+
+}
 selectList.addEventListener('change', (e) => {
     if (e.target.value === 'g') {
+
+        addMessage('Gram Selected', 'alert alert-success text-center font-weight-bold text-uppercase');
+
         inputgram.style.display = 'flex';
-        inputPound.style.display = 'none'
-        inputkg.style.display = 'none'
-        inputounce.style.display = 'none'
+        inputPound.style.display = 'none';
+        inputkg.style.display = 'none';
+        inputounce.style.display = 'none';
+
+        // clearing the result div also
+        resultDiv.style.display = 'none'
 
 
     }
     else if (e.target.value === 'k') {
+
+        addMessage('Kilogram Selected', 'alert alert-success text-center font-weight-bold text-uppercase');
+
         inputkg.style.display = 'flex';
         inputPound.style.display = 'none'
         inputgram.style.display = 'none'
-        inputounce.style.display = 'none'
+        inputounce.style.display = 'none';
+
+        // clearing the result div also
+        resultDiv.style.display = 'none'
 
 
 
     }
     else if (e.target.value === 'o') {
+
+        addMessage('Ounce Selected', 'alert alert-success text-center font-weight-bold text-uppercase');
+
         inputounce.style.display = 'flex';
         inputPound.style.display = 'none'
         inputgram.style.display = 'none'
-        inputkg.style.display = 'none'
+        inputkg.style.display = 'none';
+
+        // clearing the result div also
+        resultDiv.style.display = 'none'
 
 
 
 
     }
     else if (e.target.value === 'p') {
+
+        addMessage('Pound Selected', 'alert alert-success text-center font-weight-bold text-uppercase');
+
         inputPound.style.display = 'flex';
         inputgram.style.display = 'none'
         inputkg.style.display = 'none'
-        inputounce.style.display = 'none'
+        inputounce.style.display = 'none';
+
+        // clearing the result div also
+        resultDiv.style.display = 'none'
 
     }
     else {
+
+        addMessage('None Selected Selected', 'alert alert-danger text-center font-weight-bold text-uppercase');
+
+
         inputPound.style.display = 'none'
         inputgram.style.display = 'none'
         inputkg.style.display = 'none'
-        inputounce.style.display = 'none'
+        inputounce.style.display = 'none';
+
+
+        // clearing the result div also
+        resultDiv.style.display = 'none'
 
 
     }
