@@ -16,7 +16,7 @@ const inputDivO = document.querySelector('#ounceData');
 // select list here
 const selectList = document.querySelector('#selectItem');
 
-// gettinh the input div here
+// getting the input div here
 const inputPound = document.querySelector('#pound');
 const inputgram = document.querySelector('#gram');
 const inputkg = document.querySelector('#kilo');
@@ -35,14 +35,11 @@ resultDiv.style.display = 'none'
 // adding the event listener
 inputDivP.addEventListener('input', (e) => {
 
+
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
 
     // getting the input data
     let pndData = e.target.value;
-
-    inputgram.style.display = 'none'
-    inputkg.style.display = 'none'
-    inputounce.style.display = 'none'
 
     // printing the data
     poundOutput.innerHTML = `${pndData}`
@@ -52,14 +49,13 @@ inputDivP.addEventListener('input', (e) => {
 })
 inputDivG.addEventListener('input', (e) => {
 
+
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none';
 
     // getting the input data
     let gmData = e.target.value;
 
-    inputPound.style.display = 'none'
-    inputkg.style.display = 'none'
-    inputounce.style.display = 'none'
+
 
     gramsOutput.innerHTML = `${gmData}`
     poundOutput.innerHTML = `${gmData * 0.0022046}`;
@@ -70,14 +66,13 @@ inputDivG.addEventListener('input', (e) => {
 })
 inputDivK.addEventListener('input', (e) => {
 
+
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
 
     // getting the input data
     let kiloData = e.target.value;
 
-    inputPound.style.display = 'none'
-    inputgram.style.display = 'none'
-    inputounce.style.display = 'none'
+
 
     kgOutput.innerHTML = `${kiloData}`
     poundOutput.innerHTML = `${KiloData * 2.2046}`;
@@ -87,14 +82,13 @@ inputDivK.addEventListener('input', (e) => {
 })
 inputDivO.addEventListener('input', (e) => {
 
+
     e.target.value ? resultDiv.style.display = 'block' : resultDiv.style.display = 'none'
 
     // getting the input data
     let OunceData = e.target.value;
 
-    inputPound.style.display = 'none'
-    inputgram.style.display = 'none'
-    inputkg.style.display = 'none'
+
 
     ounceOutput.innerHTML = `${OunceData}`
     poundOutput.innerHTML = `${OunceData * 0.062500}`;
@@ -106,24 +100,45 @@ inputDivO.addEventListener('input', (e) => {
 })
 selectList.addEventListener('change', (e) => {
     if (e.target.value === 'g') {
-        inputgram.style.display = 'flex'
+        inputgram.style.display = 'flex';
+        inputPound.style.display = 'none'
+        inputkg.style.display = 'none'
+        inputounce.style.display = 'none'
+
 
     }
     else if (e.target.value === 'k') {
-        inputkg.style.display = 'flex'
+        inputkg.style.display = 'flex';
+        inputPound.style.display = 'none'
+        inputgram.style.display = 'none'
+        inputounce.style.display = 'none'
+
 
 
     }
     else if (e.target.value === 'o') {
-        inputounce.style.display = 'flex'
+        inputounce.style.display = 'flex';
+        inputPound.style.display = 'none'
+        inputgram.style.display = 'none'
+        inputkg.style.display = 'none'
+
+
 
 
     }
     else if (e.target.value === 'p') {
-        inputPound.style.display = 'flex'
+        inputPound.style.display = 'flex';
+        inputgram.style.display = 'none'
+        inputkg.style.display = 'none'
+        inputounce.style.display = 'none'
+
     }
     else {
-        inputPound.style.display = 'flex'
+        inputPound.style.display = 'none'
+        inputgram.style.display = 'none'
+        inputkg.style.display = 'none'
+        inputounce.style.display = 'none'
+
 
     }
 
